@@ -1,4 +1,13 @@
 RapiDataTermapi::Application.routes.draw do
+  resources :term_items
+
+
+  resources :datasets
+
+
+  resources :terms
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
