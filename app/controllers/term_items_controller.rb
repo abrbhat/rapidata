@@ -80,4 +80,9 @@ class TermItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def build
+    Dataset.all.each do |dataset|
+      
+  end 
 end

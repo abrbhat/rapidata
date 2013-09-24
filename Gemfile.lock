@@ -37,6 +37,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    engtagger (0.1.2)
     erubis (2.7.0)
     execjs (2.0.1)
     hike (1.2.3)
@@ -104,6 +105,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  engtagger (~> 0.1.2)
   jquery-rails
   mysql2
   rails (= 3.2.9)
