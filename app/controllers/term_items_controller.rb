@@ -82,7 +82,17 @@ class TermItemsController < ApplicationController
   end
 
   def build
-    Dataset.all.each do |dataset|
-      
+    #@noun_phrases_array=Array.new
+    Dataset.find([1,2,3,4,50]).each do |dataset|
+      tagger= EngTagger.new
+      text=[dataset.title,dataset.description,dataset.department,dataset.sector].join(' ')
+      tagged=tagger.add_tags(text.gsub(/(\.)/,'. '))
+      nouns=tagger.get_nouns(tagged.downcase)
+      nouns.each do |noun,frequency|
+        term=Term.find_or_create_by_term(noun)
+        @term_item=dataset.term_items.build(:priority => frequency)
+
+      end
+    end        
   end 
 end
