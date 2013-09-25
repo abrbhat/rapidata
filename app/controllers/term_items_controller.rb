@@ -90,8 +90,10 @@ class TermItemsController < ApplicationController
       nouns=tagger.get_nouns(tagged.downcase)
       nouns.each do |noun,frequency|
         term=Term.find_or_create_by_term(noun)
-        @term_item=dataset.term_items.build(:priority => frequency)
-
+        term_item=dataset.term_items.build(:term => term,:priority => frequency)
+        if term_item.save
+          @message="Arey!Yeh to chap gaya!!"
+        end
       end
     end        
   end 
