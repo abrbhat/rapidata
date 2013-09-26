@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasets>
+	<dataset>
+		<title>Catalogue of Micro Data from National Sample Survey (NSS)</title>
+		<description>The catalogue contains complete metadata of all NSS Surveys being disseminated by the Minstry of Statistics and Programme Implementation. The metadata is maintained as per DDI standard. The catalogue will be regularly updated.</description>
+		<link>http://data.gov.in/dataset/catalogue-micro-data-national-sample-survey-nss</link>
+		<department>Ministry of Statistics and Programme Implementation</department>
+		<sector>All</sector>
+		<terms>
+			<term>
+				<value>term1</value>
+				<priority>2</priority>
+			</term>
+			<term>
+				<value>term2</value>
+				<priority>1</priority>
+			</term>
+			<term>
+				<value>term3</value>
+				<priority>1</priority>
+			</term>
+		</terms>
+	</dataset>
+	<dataset>
+		<title>Economic Census 2005</title>
+		<description>Economic Census is a complete count of all economic units in the country. The Fifth Economic Census was conducted in 2005 covering all enterprises other than crop production and certain other categories. Complete information on the economic census can be accesed from the link provided
+		</description>
+		<link>http://data.gov.in/dataset/economic-census-2005</link>
+		<department>Ministry of Statistics and Programme Implementation
+		</department>
+		<sector>Economy</sector>
+		<terms>
+			<term>
+				<value>term4</value>
+				<priority>2</priority>
+			</term>
+			<term>
+				<value>term5</value>
+				<priority>1</priority>
+			</term>
+			<term>
+				<value>term6</value>
+				<priority>1</priority>
+			</term>
+		</terms>
+	</dataset>
+</datasets>
