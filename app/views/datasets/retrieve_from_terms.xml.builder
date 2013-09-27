@@ -1,4 +1,4 @@
-xml version="1.0" encoding="UTF-8"
+xml.instruct!
 xml.datasets() do
 	@datasets.each do |dataset,priority|
 		xml.dataset do
