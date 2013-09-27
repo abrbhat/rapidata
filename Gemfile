@@ -5,7 +5,7 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -37,3 +37,8 @@ gem 'engtagger','~>0.1.2'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'rails_12factor', group: :production
+
+source "https://rubygems.org"
+ruby "1.9.3"
