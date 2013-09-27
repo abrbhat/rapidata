@@ -25,7 +25,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database:dbkrlv45a4v6ne
+  database: dbkrlv45a4v6ne
   pool: 5
-  username:fvsoqhpjsjkvii
-  password:dewsLCzRkRrxe8Mxfo-bv0NIsj
+  username: fvsoqhpjsjkvii
+  password: dewsLCzRkRrxe8Mxfo-bv0NIsj
