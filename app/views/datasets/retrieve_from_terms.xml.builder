@@ -9,6 +9,12 @@ xml.rapidata do
 				xml.department(dataset.department)
 				xml.sector(dataset.sector)
 				xml.priority(priority)
+				xml.terms do
+					dataset.term_items.each do |term_item|
+						xml.term(term_item.term.term)
+					end
+				end
+				
 			end
 		end
 	end
