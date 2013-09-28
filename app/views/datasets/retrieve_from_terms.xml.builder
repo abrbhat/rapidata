@@ -18,9 +18,9 @@ xml.rapidata do
 			end
 		end
 	end
-	xml.terms() do
+	xml.list_terms() do
 		@terms.each do |term,priority|
-			xml.term(term)
+			xml.list_term(term)
 		end
 	end
 end
