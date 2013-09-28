@@ -11,7 +11,7 @@ xml.datasets() do
 			xml.terms do
 				dataset.term_items.each do |term_item|
 					xml.term(term_item.term.term)
-					xml.term(term_item.priority)
+					xml.value(term_item.priority)
 				end
 			end
 		end
