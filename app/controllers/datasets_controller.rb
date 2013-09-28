@@ -82,6 +82,7 @@ class DatasetsController < ApplicationController
   end
 
   def retrieve_from_terms
+    headers['Access-Control-Allow-Origin'] = "*"
     @datasets=Hash.new(0)
     requested_terms=params[:terms].split(/[ -]/)
     requested_terms.each do |requested_term|
