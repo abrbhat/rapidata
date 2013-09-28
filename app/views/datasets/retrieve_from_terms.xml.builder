@@ -1,21 +1,20 @@
 xml.instruct!
-xml.datasets() do
-	@datasets.each do |dataset,priority|
-		xml.dataset do
-			xml.title(dataset.title)
-			xml.description(dataset.description)
-			xml.link(dataset.link)
-			xml.department(dataset.department)
-			xml.sector(dataset.sector)
-			xml.priority(priority)
-			xml.terms do
-				dataset.term_items.each do |term_item|
-					xml.term do
-						xml.value(term_item.term.term)
-						xml.priority(term_item.priority)
-					end
-				end
+xml.rapidata do
+	xml.datasets() do
+		@datasets.each do |dataset,priority|
+			xml.dataset do
+				xml.title(dataset.title)
+				xml.description(dataset.description)
+				xml.link(dataset.link)
+				xml.department(dataset.department)
+				xml.sector(dataset.sector)
+				xml.priority(priority)
 			end
+		end
+	end
+	xml.terms() do
+		@terms.each do |term,priority|
+			xml.term(term)
 		end
 	end
 end
