@@ -10,8 +10,10 @@ xml.datasets() do
 			xml.priority(priority)
 			xml.terms do
 				dataset.term_items.each do |term_item|
-					xml.term(term_item.term.term)
-					xml.value(term_item.priority)
+					xml.term do
+						xml.value(term_item.term.term)
+						xml.priority(term_item.priority)
+					end
 				end
 			end
 		end
