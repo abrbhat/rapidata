@@ -1,21 +1,29 @@
 <div class ="container">
-        <div class="row header">
-            <div class="col-md-2" id="rapid">
-                <h2>Rapidata</h2>
-            </div>
-            <div class="col-md-8">
-                <input type="search" class="form-control" id="search_box" placeholder="Search">
-            </div>
-            <div class="col-md-1">
-                <div id="ajax_loader">
-                    <%= image_tag "ajax-loader.gif" %>
-                </div>
-            </div>
-        </div>
+    <table class="table">
+    <thead>
+        <tr>
+            <td id="title_column"><div id="title">Rapidata</div></td>
+           
+                <td >
+                  <div class="search-bar">
+                    <input type="search" class="form-control" id="search_box" placeholder="Type keyword to start searching">
+                  </div>
+                </td>
+            
+                <td>
+                <div class="search-bar">
+                  <div id="ajax_loader">
+                        <%= image_tag "ajax-loader.gif" %>
+                  </div>
+                    </div>
+                </td>
+            
+        </tr>
+    </thead>
+    </table>
     <hr>
     <div class = "container">
         <div id = "tag-cloud">
-            <div class ="tags_val">Nothing loaded yet</div>
             <div class ="clear"></div>
         </div>
     </div>
@@ -24,4 +32,3 @@
     <p></p>
     <div class ="container" id="search_result"></div>
 </div>  
-

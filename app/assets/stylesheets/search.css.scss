@@ -1,13 +1,12 @@
-// Place all the styles related to the term_items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .search_head
 {
     font-size:20px;
     color:#0000ff;
     clear:both;
 } 
+.search-bar{
+  margin-top:6px;
+}
 .header
 {
     margin:10px;
@@ -17,6 +16,12 @@
     font-size:13px;
     color:#000000;
 } 
+#title{
+  font-size:30px;
+}
+#title_column{
+  width:20%;
+}
 .tag
 {
     font-size:17px;
@@ -52,3 +57,4 @@
 {
     clear: both;
 }
+
