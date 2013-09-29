@@ -25,7 +25,7 @@
 }
 function setFontSize() {
     var maxFontSize = 27;
-    var fontSize = Math.floor(Math.random() * maxFontSize + 14) + 'px';    
+    var fontSize = Math.floor(Math.random() * maxFontSize + 20) + 'px';    
     return fontSize;
 }
 function setOffsets() {
