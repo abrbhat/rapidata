@@ -23,21 +23,6 @@
     } 
     return color;  
 }
-function setFontSize() {
-    var maxFontSize = 27;
-    var fontSize = Math.floor(Math.random() * maxFontSize + 20) + 'px';    
-    return fontSize;
-}
-function setOffsets() {
-  var offsets = {};  
-  var randTop = Math.floor(Math.random() * 10);
-  var randLeft = Math.floor(Math.random() * 10);  
-  var maxTop = Math.floor(Math.random() * randTop) + 'px';
-  var maxLeft = Math.floor(Math.random() * randLeft) + 'px';
-  offsets.top = maxTop;
-  offsets.left = maxLeft;   
-  return offsets;    
-}
 function send_ajax_call(){
     var value = $('#search_box').val();
     $.ajax({
