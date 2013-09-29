@@ -97,7 +97,8 @@ function send_ajax_call(){
                 var cssFontSize = setFontSize();
                 var linkOffsets = setOffsets();
                 $tags_div.css({color: cssColor});
-              });
+              }); 
+             $('#tag-cloud').css('height',$('.tags_val').height()*4);
         },
         error: function(){
                 alert("Oops!Something went wrong.");
