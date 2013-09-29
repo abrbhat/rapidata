@@ -88,7 +88,7 @@ function send_ajax_call(){
               $(xml).find('list_term').each(function() {
                   var term_value = $(this).text();
                   terms += '<div class ="tags_val">'+ term_value+'</div>';
-                  if()
+                  if(j%7 == 0)
                   {
                       terms += '<br>';
                   }
@@ -100,7 +100,7 @@ function send_ajax_call(){
               var cssColor = createRandomColor();
               var cssFontSize = setFontSize();
               var linkOffsets = setOffsets();
-              $tags_div.css({color: cssColor});});
+              $tags_div.css({color: cssColor, top: linkOffsets.top, left: linkOffsets.left});});
         },
         error: function(){
                 alert("Oops!Something went wrong.");
