@@ -10,7 +10,7 @@
           var term_val = send_ajax_call();
         }, 500);
     });
-      $('#tag-cloud').on('click', 'li', function () {
+      $('#tag-cloud').on('click', 'div', function () {
          var selected_tag = $(this).text();
           var input_value = $('#search_box').val() +" "+ selected_tag;
           $('#search_box').val(input_value);
