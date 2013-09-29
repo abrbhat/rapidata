@@ -53,7 +53,7 @@ function send_ajax_call(){
           $("#search_result").html(result);
           var i=1;
           $(xml).find('dataset').each(function() {
-           // Do something to each item here...
+           // Constructing Search Listings
                 var dataset_title = $(this).find('title').text();
                 var dataset_description = $(this).find('description').text();                 
                 result += 
@@ -81,7 +81,7 @@ function send_ajax_call(){
               // Constructing Tag Cloud
               $(xml).find('list_term').each(function() {
                   var term_value = $(this).text();
-                  terms += '<div class ="tags_val">'+ term_value+'</div>';
+                  terms += '<a href="#"><div class ="tags_val">'+ term_value+'</div></a>';
                   $('#tag-cloud').html(terms);
               });
               $('#tag-cloud .tags_val').each(function() {
@@ -92,6 +92,7 @@ function send_ajax_call(){
                 $tags_div.css({color: cssColor});
               }); 
              $('#tag-cloud').css('height',$('.tags_val').height()*4);
+
         },
         error: function(){
                 alert("Oops!Something went wrong.");
