@@ -69,7 +69,6 @@ function send_azax_call(){
          //url:"retrieve_from_terms.json",
          dataType:"xml",
          async:"true",
-
          data:{"terms":value},
         success: function (xml) {
 
@@ -79,17 +78,17 @@ function send_azax_call(){
                 var i=1;
                 $(xml).find('dataset').each(function() {
                  // Do something to each item here...
-                        var data = $(this).find('title').text();
-                        var data1 = $(this).find('description').text();
+                        var dataset_title = $(this).find('title').text();
+                        var dataset_description = $(this).find('description').text();
                         var tags = "";
                         $(this).find('term').each(function(){
-                            tags += $(this).text() +"  ";
+                            tags += $(this).text() +", ";
 
                         });
                         
-                         result += '<div class ="search_head">'+data+"</div>"+
-                             '<div class="search_desc">'+data1+"</div>"+
-                             '<div class="tag">'+"Related Tags are "+tags+"</div>"+
+                         result += '<div class ="search_head">'+dataset_title+"</div>"+
+                             '<div class="search_desc">'+dataset_description+"</div>"+
+                             '<div class="tag">'+"Related Tags are: "+tags+"</div>"+
                              '<div class= "download_links">'+
                                                 '<div class="row">'+
                                             '<div class="col-md-4">'+
