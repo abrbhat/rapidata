@@ -93,8 +93,8 @@ function send_ajax_call(){
                 total_width += $(this).outerWidth(true);
                 $tags_div.css({color: cssColor});
               }); 
-             var number_of_rows = (total_width % ($("#tag-cloud").width()) +1 );
-             alert (number_of_rows);
+             var number_of_rows = total_width % ($("#tag-cloud").width()+1);
+             alert ("total width="+total_width+"rows="+number_of_rows);
 
              $('#tag-cloud').css('height',($('.tags_val').first().outerHeight(true)*number_of_rows));
 
