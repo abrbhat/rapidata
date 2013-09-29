@@ -65,7 +65,7 @@ function send_azax_call(){
         var value = $('#search_box').val();
     $.ajax({
          type: "GET",
-         url: "http://rapidata-api.herokuapp.com/datasets/retrieve_from_terms.xml",
+         url: "datasets/retrieve_from_terms.xml",
          //url:"retrieve_from_terms.json",
          dataType:"xml",
          async:"true",
