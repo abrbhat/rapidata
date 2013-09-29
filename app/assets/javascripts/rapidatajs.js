@@ -92,7 +92,7 @@ function send_ajax_call(){
                 $tags_div.css({color: cssColor});
               }); 
             alert(($('.tags_val').first().height()+10));
-             $('#tag-cloud').css('height',(($('.tags_val').first().height()+10)*4));
+             $('#tag-cloud').css('height',($('.tags_val').first().outerHeight(true)*4));
 
         },
         error: function(){
