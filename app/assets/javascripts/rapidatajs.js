@@ -88,19 +88,16 @@ function send_ajax_call(){
               $(xml).find('list_term').each(function() {
                   var term_value = $(this).text();
                   terms += '<div class ="tags_val">'+ term_value+'</div>';
-                  if(j%7 == 0)
-                  {
-                      terms += '<br>';
-                  }
                   $('#tag-cloud').html(terms);
                   j++;
               });
               $('#tag-cloud .tags_val').each(function() {
-              var $tags_div = $(this);
-              var cssColor = createRandomColor();
-              var cssFontSize = setFontSize();
-              var linkOffsets = setOffsets();
-              $tags_div.css({color: cssColor, top: linkOffsets.top, left: linkOffsets.left});});
+                var $tags_div = $(this);
+                var cssColor = createRandomColor();
+                var cssFontSize = setFontSize();
+                var linkOffsets = setOffsets();
+                $tags_div.css({color: cssColor});
+              });
         },
         error: function(){
                 alert("Oops!Something went wrong.");
