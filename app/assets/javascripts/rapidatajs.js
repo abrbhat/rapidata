@@ -91,8 +91,8 @@ function send_ajax_call(){
                 var linkOffsets = setOffsets();
                 $tags_div.css({color: cssColor});
               }); 
-            alert($('.tags_val').first().css("height"));
-             $('#tag-cloud').css('height',(($('.tags_val').first().css("height")+10)*4));
+            alert($('.tags_val').first().css("height")+10px);
+             $('#tag-cloud').css('height',(($('.tags_val').first().css("height")+10px)*4));
 
         },
         error: function(){
