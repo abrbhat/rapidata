@@ -1,5 +1,7 @@
 RapiDataTermapi::Application.routes.draw do
  
+  get "search/index"
+
   resources :terms
 
   
