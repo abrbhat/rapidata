@@ -1,3 +1,35 @@
-// Place all the styles related to the search controller here.
+// Place all the styles related to the term_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+    .search_head
+    {
+        font-size:20px;
+        color:#0000ff;
+    } 
+    .search_desc
+    {
+        font-size:13px;
+        color:#000000;
+    } 
+    .tag
+    {
+        font-size:17px;
+        color:#00000f;
+    } 
+
+#tag-cloud {
+    width: 100%;
+    list-style: none;
+    font: 100% Arial, sans-serif;
+    border: 0.1px solid gray;
+    border-width: 1px 0 1px 0;
+    line-height: 1.5;
+}
+
+#tag-cloud .tags_val {
+  display: inline;
+  text-transform: lowercase;
+  text-decoration: none;
+  padding: 0 1em;
+}
