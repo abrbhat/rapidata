@@ -84,15 +84,19 @@ function send_ajax_call(){
                   terms += '<a href="#"><div class ="tags_val">'+ term_value+'</div></a>';
                   $('#tag-cloud').html(terms);
               });
+              var total_width=0;
               $('#tag-cloud .tags_val').each(function() {
                 var $tags_div = $(this);
                 var cssColor = createRandomColor();
                 var cssFontSize = setFontSize();
                 var linkOffsets = setOffsets();
+                total_width += $(this).outerWidth(true);
                 $tags_div.css({color: cssColor});
               }); 
-            alert(($('.tags_val').first().height()+10));
-             $('#tag-cloud').css('height',($('.tags_val').first().outerHeight(true)*4));
+             var number_of_rows = (total_width % ($("#tag-cloud").width()) +1 );
+             alert (number_of_rows);
+
+             $('#tag-cloud').css('height',($('.tags_val').first().outerHeight(true)*number_of_rows));
 
         },
         error: function(){
