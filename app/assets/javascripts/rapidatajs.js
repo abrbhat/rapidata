@@ -59,7 +59,8 @@ function process_ajax_response(xml)
           $(xml).find('dataset').each(function() {
            // Constructing Search Listings
                 var dataset_title = $(this).find('title').text();
-                var dataset_description = $(this).find('description').text();                 
+                var dataset_description = $(this).find('description').text();  
+                var download_link = $(this).find('download_link').text();               
                 result += 
                    '<div class="search_listing">'
                 +     '<div class ="search_head">'+dataset_title+"</div>"
@@ -67,12 +68,21 @@ function process_ajax_response(xml)
                 +     '<div class= "download_links">'
                 +        '<div class="row">'
                 +            '<div class="col-md-1 download_text">Download:</div>'
-                +            '<div class="col-md-1">'
-                +              '<button type="button" class="btn btn-info btn-sm ">XLS</button>'
-                +            '</div>'
-                +            '<div class="col-md-1">'
-                +              '<button type="button" class="btn btn-info btn-sm ">XML</button>'
-                +            '</div>'
+                +            '<a href="http://'+download_link+'&format=xls"><div class="col-md-1">'
+                +              '<button type="button" class="btn btn-info btn-sm" >XLS</button>'
+                +            '</div></a>'
+                +            '<a href="http://'+download_link+'&format=xlsx"><div class="col-md-1">'
+                +              '<button type="button" class="btn btn-info btn-sm" >XLSX</button>'
+                +            '</div></a>'
+                +            '<a href="http://'+download_link+'&format=json"><div class="col-md-1">'
+                +              '<button type="button" class="btn btn-info btn-sm" >JSON</button>'
+                +            '</div></a>'
+                +            '<a href="http://'+download_link+'&format=jsonp"><div class="col-md-1">'
+                +              '<button type="button" class="btn btn-info btn-sm" >JSONP</button>'
+                +            '</div></a>'
+                +            '<a href="http://'+download_link+'&format=xml"><div class="col-md-1">'
+                +              '<button type="button" class="btn btn-info btn-sm" >XML</button>'
+                +            '</div></a>'                
                 +            '<div class="col-md-4"></div>'
                 +        '</div>'
                 +      '</div>'
