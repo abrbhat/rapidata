@@ -15,7 +15,7 @@ class DatasetsController < ApplicationController
       end  
     end
 
-    #Select top 100 datasets according to frequency of terms
+    #Select top 25 datasets according to frequency of terms
     @datasets=@datasets.sort_by {|key,value| value}.reverse.first(25)
     @terms=@terms.sort_by {|key,value| value}.reverse.first(28)
   end
