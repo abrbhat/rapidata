@@ -59,11 +59,12 @@ function process_ajax_response(xml)
           $(xml).find('dataset').each(function() {
            // Constructing Search Listings
                 var dataset_title = $(this).find('title').text();
-                var dataset_description = $(this).find('description').text();  
+                var dataset_description = $(this).find('description').text();
+                var link_to_dataset=  $(this).find('link').text();
                 var download_link = $(this).find('download_link').text();               
                 result += 
                    '<div class="search_listing">'
-                +     '<div class ="search_head">'+dataset_title+"</div>"
+                +     '<a href="http://'+link_to_dataset+'"><div class ="search_head"><u>'+dataset_title+"</u></div></a>"
                 +     '<div class="search_desc">'+dataset_description+"</div>"
                 +     '<div class= "download_links">'
                 +        '<div class="row">'
