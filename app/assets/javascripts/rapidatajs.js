@@ -96,11 +96,11 @@ function send_ajax_call(){
                   j++;
               });
               $('#tag-cloud .tags_val').each(function() {
-              var $a = $(this);
+              var $tags_div = $(this);
               var cssColor = createRandomColor();
               var cssFontSize = setFontSize();
               var linkOffsets = setOffsets();
-              $a.css({color: cssColor, fontSize: cssFontSize, top: linkOffsets.top, left: linkOffsets.left});});
+              $tags_div.css({color: cssColor, top: linkOffsets.top, left: linkOffsets.left});});
         },
         error: function(){
                 alert("Oops!Something went wrong.");
