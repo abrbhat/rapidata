@@ -1,4 +1,4 @@
- $(document).ready(function(){
+$(document).ready(function(){
       var input = localStorage.getItem('myInput');
       $('#search_box').val(input);
       var timeoutReference;
@@ -14,7 +14,9 @@
           $('#search_box').val(input_value);
           var term_val = send_ajax_call();
       });    
+    hide_loader();
 });
+
  function createRandomColor() {  
     var hex = '0123456789ABC'.split(''),  
     color = '#', i;      
@@ -23,6 +25,8 @@
     } 
     return color;  
 }
+function hide_loader() { $('#ajax_loader').hide();}
+function show_loader() { $('#ajax_loader').show();}
 function send_ajax_call(){
     var search_text = $('#search_box').val();
     $.ajax({
@@ -32,15 +36,19 @@ function send_ajax_call(){
       dataType:"xml",
       async:"true",
       data:{"terms":search_text},
+      beforeSend: function() { show_loader()},
       success: function (xml) {
         // Process ajax response only if Search Text has not changed
         if (search_text==$('#search_box').val()){
           process_ajax_response(xml);
-        };          
-      },
-      error: function(){
-        alert("Oops!Something went wrong.Please Try Again");
-      }
+          hide_loader();
+        };
+          
+        },
+        error: function(){
+                alert("Oops!Something went wrong.");
+                hide_loader();
+        }
   });
 return search_text;
 }
@@ -58,12 +66,12 @@ function process_ajax_response(xml)
                 +     '<div class="search_desc">'+dataset_description+"</div>"
                 +     '<div class= "download_links">'
                 +        '<div class="row">'
-                +            '<div class="col-md-4"></div>'
-                +            '<div class="col-md-2">'
-                +              '<button type="button" class="btn btn-info ">    Download in xml    </button>'
+                +            '<div class="col-md-1">Download:</div>'
+                +            '<div class="col-md-1">'
+                +              '<button type="button" class="btn btn-info ">XLS</button>'
                 +            '</div>'
-                +            '<div class="col-md-2">'
-                +              '<button type="button" class="btn btn-info ">    Download in excel    </button>'
+                +            '<div class="col-md-1">'
+                +              '<button type="button" class="btn btn-info ">XML</button>'
                 +            '</div>'
                 +            '<div class="col-md-4"></div>'
                 +        '</div>'
@@ -79,7 +87,7 @@ function process_ajax_response(xml)
                   terms += '<a href="#"><div class ="tags_val">'+ term_value+'</div></a>';
                   $('#tag-cloud').html(terms);
               });
-                $('#tag-cloud .tags_val').each(function() {
+              $('#tag-cloud .tags_val').each(function() {
                 var $tags_div = $(this);
                 var cssColor = createRandomColor();
                 $tags_div.css({color: cssColor});

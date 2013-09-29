@@ -1,10 +1,15 @@
 <div class ="container">
         <div class="row header">
             <div class="col-md-2" id="rapid">
-                Rapidata
+                <h2>Rapidata</h2>
             </div>
             <div class="col-md-8">
                 <input type="search" class="form-control" id="search_box" placeholder="Search">
+            </div>
+            <div class="col-md-1">
+                <div id="ajax_loader">
+                    <%= image_tag "ajax-loader.gif" %>
+                </div>
             </div>
         </div>
     <hr>
@@ -19,3 +24,4 @@
     <p></p>
     <div class ="container" id="search_result"></div>
 </div>  
+
