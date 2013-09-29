@@ -61,38 +61,33 @@ function send_ajax_call(){
                     tags += $(this).text() +", ";
                 });                  
                 result += 
-                  '<div class="search_listing">'+
-                     '<div class ="search_head">'+dataset_title+"</div>"+
-                     '<div class="search_desc">'+dataset_description+"</div>"+
-                     '<div class="tag">'+"Related Tags are: "+tags+"</div>"+
-                     '<div class= "download_links">'+
-                        '<div class="row">'+
-                            '<div class="col-md-4">'+
-                            '</div>'+
-                            '<div class="col-md-2">'+
-                              '<button type="button" class="btn btn-info ">    Download in xml    </button>'+
-                            '</div>'+
-                            '<div class="col-md-2">'+
-                              '<button type="button" class="btn btn-info ">    Download in excel    </button>'+
-                            '</div>'+
-                            '<div class="col-md-4">'+
-                            '</div>'+
-                        '</div>'+
-                      '</div>'
-                  '</div>';
+                   '<div class="search_listing">'
+                +     '<div class ="search_head">'+dataset_title+"</div>"
+                +     '<div class="search_desc">'+dataset_description+"</div>"
+                +     '<div class="tag">'+"Related Tags are: "+tags+"</div>"
+                +     '<div class= "download_links">'
+                +        '<div class="row">'
+                +            '<div class="col-md-4"></div>'
+                +            '<div class="col-md-2">'
+                +              '<button type="button" class="btn btn-info ">    Download in xml    </button>'
+                +            '</div>'
+                +            '<div class="col-md-2">'
+                +              '<button type="button" class="btn btn-info ">    Download in excel    </button>'
+                +            '</div>'
+                +            '<div class="col-md-4"></div>'
+                +        '</div>'
+                +      '</div>'
+                + '</div>';
                                  
                      $('#search_result').html(result);
                   i++;
               });
               var terms ="";
-              var j = 1;
-
               // Constructing Tag Cloud
               $(xml).find('list_term').each(function() {
                   var term_value = $(this).text();
                   terms += '<div class ="tags_val">'+ term_value+'</div>';
                   $('#tag-cloud').html(terms);
-                  j++;
               });
               $('#tag-cloud .tags_val').each(function() {
                 var $tags_div = $(this);
@@ -101,7 +96,7 @@ function send_ajax_call(){
                 var linkOffsets = setOffsets();
                 $tags_div.css({color: cssColor});
               }); 
-             $('#tag-cloud').css('height',$('.tags_val').height()*10);
+             $('#tag-cloud').css('height',$('.tags_val').height()*4);
         },
         error: function(){
                 alert("Oops!Something went wrong.");
