@@ -24,19 +24,30 @@
     return color;  
 }
 function send_ajax_call(){
-    var value = $('#search_box').val();
+    var search_text = $('#search_box').val();
     $.ajax({
       type: "GET",
       url: "datasets/retrieve_from_terms.xml",
       //url:"retrieve_from_terms.json",
       dataType:"xml",
       async:"true",
-      data:{"terms":value},
+      data:{"terms":search_text},
       success: function (xml) {
-          // Parse the xml file and get data
-          var result="";
+        // Process ajax response only if Search Text has not changed
+        if (search_text==$('#search_box').val()){
+          process_ajax_response(xml);
+        };          
+      },
+      error: function(){
+        alert("Oops!Something went wrong.Please Try Again");
+      }
+  });
+return search_text;
+}
+function process_ajax_response(xml)
+{
+   var result="";
           $("#search_result").html(result);
-          var i=1;
           $(xml).find('dataset').each(function() {
            // Constructing Search Listings
                 var dataset_title = $(this).find('title').text();
@@ -60,7 +71,6 @@ function send_ajax_call(){
                 + '</div>';
                                  
                      $('#search_result').html(result);
-                  i++;
               });
               var terms ="";
               // Constructing Tag Cloud
@@ -69,16 +79,9 @@ function send_ajax_call(){
                   terms += '<a href="#"><div class ="tags_val">'+ term_value+'</div></a>';
                   $('#tag-cloud').html(terms);
               });
-              var total_width=0;
-              $('#tag-cloud .tags_val').each(function() {
+                $('#tag-cloud .tags_val').each(function() {
                 var $tags_div = $(this);
                 var cssColor = createRandomColor();
                 $tags_div.css({color: cssColor});
               }); 
-        },
-        error: function(){
-                alert("Oops!Something went wrong.");
-        }
-  });
-return value;
 }
