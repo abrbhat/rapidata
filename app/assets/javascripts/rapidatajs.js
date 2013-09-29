@@ -88,16 +88,8 @@ function send_ajax_call(){
               $('#tag-cloud .tags_val').each(function() {
                 var $tags_div = $(this);
                 var cssColor = createRandomColor();
-                var cssFontSize = setFontSize();
-                var linkOffsets = setOffsets();
-                total_width += $(this).outerWidth(true);
                 $tags_div.css({color: cssColor});
               }); 
-             var number_of_rows = total_width % ($("#tag-cloud").width()+1);
-             alert ("total width="+total_width+"rows="+number_of_rows);
-
-             $('#tag-cloud').css('height',($('.tags_val').first().outerHeight(true)*number_of_rows));
-
         },
         error: function(){
                 alert("Oops!Something went wrong.");
