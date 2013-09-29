@@ -2,20 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .search_head
-    {
-        font-size:20px;
-        color:#0000ff;
-    } 
-    .search_desc
-    {
-        font-size:13px;
-        color:#000000;
-    } 
-    .tag
-    {
-        font-size:17px;
-        color:#00000f;
-    } 
+{
+    font-size:20px;
+    color:#0000ff;
+    clear:both;
+} 
+.search_desc
+{
+    font-size:13px;
+    color:#000000;
+} 
+.tag
+{
+    font-size:17px;
+    color:#00000f;
+} 
 
 #tag-cloud {
     width: 100%;
