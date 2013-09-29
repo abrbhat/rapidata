@@ -60,7 +60,9 @@ function send_ajax_call(){
                 $(this).find('term').each(function(){
                     tags += $(this).text() +", ";
                 });                  
-                result += '<div class ="search_head">'+dataset_title+"</div>"+
+                result += 
+                  '<div class="search_listing">'+
+                     '<div class ="search_head">'+dataset_title+"</div>"+
                      '<div class="search_desc">'+dataset_description+"</div>"+
                      '<div class="tag">'+"Related Tags are: "+tags+"</div>"+
                      '<div class= "download_links">'+
@@ -76,7 +78,8 @@ function send_ajax_call(){
                             '<div class="col-md-4">'+
                             '</div>'+
                         '</div>'+
-                      '</div>';
+                      '</div>'
+                  '</div>';
                                  
                      $('#search_result').html(result);
                   i++;
@@ -98,7 +101,7 @@ function send_ajax_call(){
                 var linkOffsets = setOffsets();
                 $tags_div.css({color: cssColor});
               }); 
-             $('#tag-cloud').css('height',$('.tags_val').height()*4);
+             $('#tag-cloud').css('height',$('.tags_val').height()*10);
         },
         error: function(){
                 alert("Oops!Something went wrong.");

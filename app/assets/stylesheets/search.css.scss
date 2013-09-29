@@ -24,11 +24,11 @@
 }
 #tag-cloud {
     width: 100%;
-    list-style: none;
     font: 100% Arial, sans-serif;
     border: 0.1px solid gray;
     border-width: 1px 0 1px 0;
     line-height: 1.5;
+    padding:10px;
 }
 
 #tag-cloud .tags_val {
@@ -38,4 +38,8 @@
   font-size:21px;
   position:relative;
   float:left;
+}
+#search_listing {
+    margin: 5px;
+    padding: 2px;
 }
