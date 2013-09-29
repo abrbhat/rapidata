@@ -91,6 +91,7 @@ function send_ajax_call(){
                 var linkOffsets = setOffsets();
                 $tags_div.css({color: cssColor});
               }); 
+            alert($('.tags_val').css("height"));
              $('#tag-cloud').css('height',($('.tags_val').css("height")+10)*4);
 
         },
