@@ -11,8 +11,8 @@
         }, 500);
     });
       $('#tag-cloud').on('click', 'li', function () {
-         var abcd = $(this).text();
-          var input_value = $('#search_box').val() +" "+ abcd;
+         var selected_tag = $(this).text();
+          var input_value = $('#search_box').val() +" "+ selected_tag;
           $('#search_box').val(input_value);
           var term_val = send_ajax_call();
       });
@@ -105,9 +105,11 @@ function send_ajax_call(){
               });
               var terms ="";
               var j = 1;
+
+              // Constructing Tag Cloud
               $(xml).find('list_term').each(function() {
                   var term_value = $(this).text();
-                  terms += '<li class ="tags_val">'+ term_value+'</li>';
+                  terms += '<div class ="tags_val">'+ term_value+'</div>';
                   if(j%7 == 0)
                   {
                       terms += '<br>';
