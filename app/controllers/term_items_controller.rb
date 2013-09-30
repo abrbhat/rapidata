@@ -1,6 +1,5 @@
 class TermItemsController < ApplicationController
   def build
-    #@noun_phrases_array=Array.new
     Dataset.all.each do |dataset|
       tagger= EngTagger.new
 
@@ -18,7 +17,7 @@ class TermItemsController < ApplicationController
           if(refined_noun =~ /^[a-z0-9]*$/)
             refined_noun.capitalize!
           end
-          if(refined_noun =~ /\w{2,}/)
+          if( (refined_noun =~ /^[1-9a-zA-Z]\w{1,}/) && not(refined_noun =~ /^[a-z]\w{1,4}/) )
             term=Term.find_or_create_by_term(refined_noun)
             term_item=TermItem.find_or_create_by_term_id_and_dataset_id(term.id,dataset.id)
           end
