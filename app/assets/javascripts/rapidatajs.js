@@ -14,6 +14,9 @@ $(document).ready(function(){
           $('#search_box').val(input_value);
           var term_val = send_ajax_call();
       });    
+    $('#clear_last_tag').on('click', 'div', function () {
+        delete_tag();
+      });
     hide_loader();
 });
 
@@ -25,6 +28,12 @@ $(document).ready(function(){
     } 
     return color;  
 }
+function delete_tag()
+  { 
+    var tags = ($('#search_box').val()).split(' '); 
+    tags.pop(); 
+    $('#search_box').val(tags.join(' ')); 
+  }
 function hide_loader() { $('#ajax_loader').hide();}
 function show_loader() { $('#ajax_loader').show();}
 function send_ajax_call(){

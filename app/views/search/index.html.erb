@@ -9,14 +9,22 @@
                     <input type="search" class="form-control" id="search_box" placeholder="Type keyword to start searching">
                   </div>
                 </td>
+                <td>
+                    <div class="search-bar">
+                        <a href="#">
+                            <div id="">
+                                <button type="button" class="btn btn-info btn-sm " id="clear_last_tag" >Clear Tag</button>
+                            </div>
+                        </a>
+                     </div>
+                </td>
             
                 <td>
                 <div class="search-bar">
-                  <div id="ajax_loader">
-                        <%= image_tag "ajax-loader.gif" %>
-                  </div>
-                    </div>
+                  <div id="ajax_loader"><%= image_tag "ajax-loader.gif" %></div>
+                </div>
                 </td>
+               
             
         </tr>
     </thead>
