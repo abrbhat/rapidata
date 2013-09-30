@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-<title>README_FOR_APP - Rails Application Documentation</title>
+<title>ReadMe - Rails Application Documentation</title>
 
 <link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
@@ -49,7 +49,7 @@
 
   <ul>
   
-    <li class="file"><a href="../doc/ReadMe.html">README_FOR_APP</a>
+    <li class="file"><a href="../doc/ReadMe.html">ReadMe</a>
   
   </ul>
 </nav>
@@ -95,7 +95,59 @@
   
 <h1>RapiData</h1>
 <h3>The Gateway to Data.gov.in</h3>
-<p>RapiData makes searching for datasets fast and efficient. It consists of two parts: an API built on Ruby on Rails and jQuery-based front-end UI</p>
+<p>RapiData makes searching for datasets fast, efficient and fun. It consists of two parts: 
+  <ul>
+    <li>RapiData API</li>
+    <li>Front-end UI</li>
+  </ul>
+</p>
+<p><h4>RapiData API:</h4>
+  The API is built as a standard <em>Ruby on Rails</em> application</br>
+  <u>API Specification:</u></br>
+  Query Link: /datasets/retreive_from_terms.xml </br>
+  Query Parameter: terms -> it a string consisting of terms separated by spaces </br>
+  Response format: <em>XML</em></br>
+  Response structure: </br>
+  <p></p>
+  <pre>
+    &lt;rapidata&gt;
+      &lt;datasets&gt;
+        &lt;dataset&gt;
+            &lt;title&gt;dataset.title&lt;/title&gt;
+            &lt;description&gt;dataset.description&lt;/description&gt;
+            &lt;link&gt;dataset.link_to_data.gov.in_page&lt;/link&gt;
+            &lt;department&gt;dataset.department&lt;/department&gt;
+            &lt;priority&gt;dataset.priority&lt;/priority&gt;
+            &lt;download_link&gt;dataset.download_link&lt;/download_link&gt;
+         &lt;/dataset&gt;
+           .
+           .
+           .      
+      &lt;/datasets&gt;
+      &lt;terms&gt;
+        &lt;term&gt;term_1&lt;/term&gt;
+        &lt;term&gt;term_2&lt;/term&gt;
+           .
+           .
+           .
+      &lt;/terms&gt;
+    &lt;/rapidata&gt;
+  </pre>
+</br>
+  The datasets are used to construct search listings and the terms are used to construct the tag clouds.
+</p>
+
+<p><h4>RapiData UI:</h4>
+  The UI is based on Responsive Design Principles using <em>jQuery</em> and <em>Bootstrap.</em>
+</br>
+</br>
+<u>Plan for sustenance:</u></br>
+<p>
+  Currently the app uses only 400 datasets. To keep this app updated, we need the list of all datasets with their titles, descriptions, departments,links to their data.gov.in page and their download links on a regular basis from the people at data.dov.in.
+</p>
+<p>
+  Apart from that, we will resolve the bugs that may crop up from time to time.
+</p>  
 </div>
 
 
