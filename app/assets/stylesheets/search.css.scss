@@ -57,8 +57,8 @@
     clear: both;
 }
 .download_text{
-  font-size:14px;
-  margin-top:9px;
+  font-size:13px;
+  margin-top:7px;
 }
 #ajax-placeholder
 { 
@@ -69,6 +69,14 @@
 { 
     width:100px;
     float:left;
+}
+#no_matching_tags
+{
+    font: 100% Arial, sans-serif;
+    color:#999999;
+    font-size:20px;
+    margin:0 auto;
+    text-align:center;
 }
 
 

@@ -5,17 +5,17 @@
         </div>
         <div class="col-md-7">
             <div id="search-bar">
-                <input type="search" class="form-control" id="search_box" placeholder="Type keyword to start searching">
+                <input type="search" class="form-control" id="search_box" placeholder="Enter Keywords to search, ex. 12, research">
             </div>
         </div>
         <div class="col-md-3">
-            <a href="#" ><div id ="clear-tag-button-placeholder">
-                
+            <a href="#" >
+                <div id ="clear-tag-button-placeholder">                
                     <button type="button" class="btn btn-default" id="clear_last_tag">
                         Clear
                     </button>
-                
-            </div></a>
+                </div>
+            </a>
             <div id="ajax-placeholder">
                 <div id="ajax_loader"><%= image_tag "ajax-loader.gif" %></div>
             </div>
@@ -24,6 +24,9 @@
     <hr>
     <div class = "container">
         <div id = "tag-cloud">
+            <div id="no_matching_tags">
+                       No matching datasets. Please try other search terms.
+            </div>
             <div class ="clear"></div>
         </div>
     </div>
