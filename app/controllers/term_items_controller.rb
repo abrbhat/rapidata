@@ -1,4 +1,4 @@
-lass TermItemsController < ApplicationController
+class TermItemsController < ApplicationController
   def build
     Dataset.all.each do |dataset|
       tagger= EngTagger.new
