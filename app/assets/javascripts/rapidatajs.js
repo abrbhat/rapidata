@@ -13,10 +13,12 @@ $(document).ready(function(){
           var input_value = $('#search_box').val() +" "+ selected_tag;
           $('#search_box').val(input_value);
           var term_val = send_ajax_call();
-      });    
-    $('#clear_last_tag').on('click', 'div', function () {
+      }); 
+     $('#clear_last_tag').on('click', function () {
         delete_tag();
-      });
+        var term_val = send_ajax_call();
+      });     
+
     hide_loader();
 });
 
