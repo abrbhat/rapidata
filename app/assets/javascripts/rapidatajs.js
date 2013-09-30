@@ -8,7 +8,7 @@ $(document).ready(function(){
           var term_val = send_ajax_call();
         }, 500);
     });
-      $('#tag-cloud').on('click', 'div', function () {
+      $('#tag-cloud').on('click', '.tags_val', function () {
          var selected_tag = $(this).text();
           var input_value = $('#search_box').val() +" "+ selected_tag;
           $('#search_box').val(input_value);
@@ -77,7 +77,8 @@ function process_ajax_response(xml)
       var download_link = $(this).find('download_link').text();               
       result += 
          '<div class="search_listing">'
-      +     '<a href="http://'+link_to_dataset+'"><div class ="search_head"><u>'+dataset_title+"</u></div></a>"
+      +     '<a href="http://'+link_to_dataset+'"><div class ="search_head"><u>'+dataset_title+'</u></div></a>'
+      +     '<p></p>'
       +     '<div class="search_desc">'+dataset_description+"</div>"
       +     '<div class= "download_links">'
       +        '<div class="row">'
@@ -100,7 +101,8 @@ function process_ajax_response(xml)
       +            '<div class="col-md-4"></div>'
       +        '</div>'
       +      '</div>'
-      + '</div>';
+      + '</div>'
+      + '<p></p>';
       $('#search_result').html(result);
         });
       var terms ="";
