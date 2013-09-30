@@ -78,7 +78,6 @@ function process_ajax_response(xml)
       result += 
          '<div class="search_listing">'
       +     '<a href="http://'+link_to_dataset+'"><div class ="search_head"><u>'+dataset_title+'</u></div></a>'
-      +     '<p></p>'
       +     '<div class="search_desc">'+dataset_description+"</div>"
       +     '<div class= "download_links">'
       +        '<div class="row">'
