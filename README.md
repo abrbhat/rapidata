@@ -1,26 +1,6 @@
-RapiData-TermAPI
+RapiData
 ================
-## API Specification:
 
-Request URL: /datasets/find?list[term1,term2...]
+The readme for this app is available at http://home.iitk.ac.in/~abhiroop/doc/ReadMe.html
 
 
-Response: 
-```xml
-<datasets>
-	<dataset>
-		<title>
-			Title
-		<title>
-		<link>
-			Link
-		</link>
-		<description>
-			Description
-		</description>
-	<dataset>
-		.
-		.
-		.
-</dataset>
-```
