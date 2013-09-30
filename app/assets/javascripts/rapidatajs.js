@@ -59,7 +59,7 @@ function send_ajax_call(){
           
         },
         error: function(){
-                alert("Oops!Something went wrong.");
+                alert("Oops!Something went wrong. Please try again.");
                 hide_loader();
         }
    });
