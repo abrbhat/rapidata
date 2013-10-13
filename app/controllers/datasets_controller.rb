@@ -39,6 +39,6 @@ class DatasetsController < ApplicationController
 
     @terms -= terms_similar_to_requested_terms
     
-    @terms = @terms.first(38).sort_by{ |m| m.match(/^[0-9]/) ? m : "A" }
+    @terms = @terms.sort_by{ |m| m }
   end
 end
