@@ -105,7 +105,7 @@ function process_ajax_response(xml)
       $('#search_result').html(result);
         });
 
-      var terms;
+      var terms="";
       var term_value;
       // Constructing Tag Cloud
       $('#tag-cloud').empty();
