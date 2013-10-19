@@ -1,3 +1,5 @@
+# Author: Abhiroop Bhatnagar
+
 class DatasetsController < ApplicationController
   def retrieve_from_terms
     headers['Access-Control-Allow-Origin'] = "*" 

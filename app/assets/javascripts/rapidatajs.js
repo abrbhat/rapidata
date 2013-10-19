@@ -1,3 +1,5 @@
+// Authors: Kundan Kumar, Sweccha Chaudhary, Abhiroop Bhatnagar
+
 $(document).ready(function(){
       var input = localStorage.getItem('myInput');
       $('#search_box').val(input);

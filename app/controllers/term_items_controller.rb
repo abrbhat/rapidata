@@ -1,3 +1,5 @@
+# Author: Abhiroop Bhatnagar
+
 class TermItemsController < ApplicationController
   def build
     Dataset.all.each do |dataset|
