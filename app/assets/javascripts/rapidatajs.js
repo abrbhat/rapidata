@@ -104,13 +104,14 @@ function process_ajax_response(xml)
       + '<p></p>';
       $('#search_result').html(result);
         });
-      var terms ="";
 
+      var terms;
+      var term_value;
       // Constructing Tag Cloud
       $(xml).find('list_term').each(function() {
-          var term_value = $(this).text();
-          terms += '<a href="#"><div class ="tags_val">'+ term_value+'</div></a>';
-          $('#tag-cloud').html(terms);
+          term_value = $(this).text();
+          terms = '<a href="#"><div class ="tags_val">'+ term_value+'</div></a>';
+          $('#tag-cloud').append(terms);
       });
 
       //Change colour only if terms are changing
