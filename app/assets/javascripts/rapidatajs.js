@@ -108,11 +108,12 @@ function process_ajax_response(xml)
       var terms;
       var term_value;
       // Constructing Tag Cloud
+      $('#tag-cloud').empty();
       $(xml).find('list_term').each(function() {
           term_value = $(this).text();
-          terms = '<a href="#"><div class ="tags_val">'+ term_value+'</div></a>';
-          $('#tag-cloud').append(terms);
+          terms += '<a href="#"><div class ="tags_val">'+ term_value+'</div></a>';   
       });
+      $('#tag-cloud').html(terms);
 
       //Change colour only if terms are changing
       if (terms) 
